@@ -5,7 +5,7 @@ import { Pokemon } from "./pokemon";
 export const AppRoutes = () => (
     <BrowserRouter>
         <Routes>
-            <Route exact path='/' element={<PokemonList />}/>
+            <Route exact path='/pokedex-reactjs' element={<PokemonList />}/>
             <Route exact path='/pokemon/:name' element={<Pokemon />}/>
         </Routes>
     </BrowserRouter>

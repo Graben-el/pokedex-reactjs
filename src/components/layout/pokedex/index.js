@@ -1,7 +1,4 @@
 import styled from "styled-components";
-import { AppRoutes } from "../../../pages/routes";
-import { Controls } from "../gameBoy";
-import { PokedexHeader } from "../header";
 
 export const Pokedex = ({ children }) => {
     return (
