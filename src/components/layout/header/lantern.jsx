@@ -14,6 +14,7 @@ const Outside = styled.div`
     height: 100px;
     border-radius: 100px;
     border: 6px double black;
+    box-shadow: -2px 3px 6px 4px rgb(0 0 0 / 55%);
 `
 
 const Inside = styled.div`

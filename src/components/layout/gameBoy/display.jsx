@@ -17,7 +17,8 @@ const Container = styled.div`
     margin: 0 15px;
     height: 100%;
     border-radius: 10px;
-    border: 4px solid black;
+    border: 3px solid black;
+    box-shadow: -2px 3px 6px 4px rgb(0 0 0 / 55%);
 `
 
 const Screen = styled.div`

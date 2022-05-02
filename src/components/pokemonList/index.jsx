@@ -21,7 +21,6 @@ export const PokemonList = () => {
             const pokemonsPromises = names.map(async pokemon => await getPokemon(pokemon))
             const pokemonsData = await Promise.all(pokemonsPromises)
                 .then(result => result)
-            console.log(pokemonsData)
             setPokemons([...pokemons, ...pokemonsData])
         }
         fetchData()
