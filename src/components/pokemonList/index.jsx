@@ -58,7 +58,7 @@ export const PokemonList = () => {
 
 const Container = styled.div`
     width: 100%;
-    padding-top: 30px;
+    padding: 30px 0;
     a {
         text-decoration: none;
         color: black;
@@ -74,14 +74,25 @@ const List = styled.ul`
     justify-content: center;
     flex-wrap: wrap;
     list-style: none;
+    padding: 0;
 `
 
 const PokemonCard = styled.li`
     text-transform: capitalize; 
-    margin: 20px;
-    img {
-        width: 250px;
+    margin: 8px;
+    padding: 10px;
+    border: 2px outset #cac9c925;
+    transition: 0.2s ease-in-out;
+    box-shadow: -3px 4px 5px #00000022;
+
+    &:hover {
+        transform: scale(1.02);
     }
+
+    img {
+        width: 200px;
+    }
+    
 `
 
 const Type = styled.div`
