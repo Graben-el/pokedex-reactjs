@@ -5,7 +5,7 @@ import { getPokemon } from "../../services/getPokemon";
 
 export const PokemonDetails = (props) => {
     const [pokemon, setPokemon] = useState({})
-    // const [description, setDescription] = useState()
+    const [description, setDescription] = useState([])
 
     const { name } = useParams()
 
@@ -13,17 +13,17 @@ export const PokemonDetails = (props) => {
         return Object.keys(obj).length === 0;
     }
 
-    // const getDescription = async (url) => {
-    //     const description = await fetch(url)
-    //     const descriptionJson = await description.json()
-    //     return descriptionJson
-    // }
+
 
     useEffect(() => {
         const fetchData = async () => {
             const data = await getPokemon(name)
-            console.log(data)
             setPokemon(data)
+            const abilityDescription = data.abilities.map(async element => {
+                const description = await fetch(element.ability.url)
+                const descriptionJson = description.json()
+                setDescription(descriptionJson)
+            })
         }
         fetchData()
     }, [])
@@ -64,7 +64,9 @@ export const PokemonDetails = (props) => {
                                             <dl key={index}>
                                                 <dt>{element.ability.name}</dt>
                                                 <dd>
-                        
+                                                    {
+                                                        // console.log(description)
+                                                    }
                                                 </dd>
                                             </dl>
                                         )

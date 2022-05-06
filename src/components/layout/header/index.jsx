@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import { Lantern } from "./lantern";
 import { Pokeball } from "./pokeball";
+import LogoPokedex from "../header/poke-logo.png"
 
 export const PokedexHeader = () => {
     return(
         <Container>
             <Lantern />
-            <Logo src="../../../../assets/images/poke-logo.png" />
+            <Logo src={LogoPokedex} />
             <Pokeball />
         </Container>
     )
