@@ -14,6 +14,9 @@ export const PokemonList = () => {
         setOffset(offset + requests)
     }
 
+    function isEmpty(obj) {
+        return Object.keys(obj).length === 0;
+    }
 
     useEffect(() => {
         const fetchData = async () => {
@@ -27,32 +30,36 @@ export const PokemonList = () => {
     }, [offset])
 
     return (
-        <Container>
-            <Input />
-            <List>
-                {
-                    pokemons.map(({ name, sprites, types }, key) => {
-                        return (
-                            <Link to={`/pokemon/${name}`} key={key}>
-                                <PokemonCard key={key}>
-                                    <img src={sprites?.other['official-artwork'].front_default} alt={name} title={name} />
-                                    <h1>{name}</h1>
-                                    <Type>
-                                        {types?.map((element, index) => {
-                                            return (
-                                                <p key={index}>{element.type.name}</p>
-                                            )
-                                        })}
-                                    </Type>
-                                </PokemonCard>
-                            </Link>
-                        )
-                    })
-                }
-            </List>
-
-            <ButtonShowMore handleOffset={handleOffset} />
-        </Container>
+        <>
+            {!isEmpty(pokemons) ?
+                <Container>
+                    <Input />
+                    <List>
+                        {
+                            pokemons.map(({ name, sprites, types }, key) => {
+                                return (
+                                    <Link to={`/pokemon/${name}`} key={key}>
+                                        <PokemonCard key={key}>
+                                            <img src={sprites?.other['official-artwork'].front_default} alt={name} title={name} />
+                                            <h1>{name}</h1>
+                                            <Type>
+                                                {types?.map((element, index) => {
+                                                    return (
+                                                        <p key={index}>{element.type.name}</p>
+                                                    )
+                                                })}
+                                            </Type>
+                                        </PokemonCard>
+                                    </Link>
+                                )
+                            })
+                        }
+                    </List>
+                    <ButtonShowMore handleOffset={handleOffset} />
+                </Container>
+                : 'Carregando'
+            }
+        </>
     )
 }
 
