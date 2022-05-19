@@ -1,12 +1,14 @@
 {
   "files": {
-    "main.js": "/pokedex-reactjs/static/js/main.2f26f9e6.js",
+    "main.js": "/pokedex-reactjs/static/js/main.cb462086.js",
     "static/media/hp.png": "/pokedex-reactjs/static/media/hp.317b89177a409a901aef.png",
     "static/media/poke-logo.png": "/pokedex-reactjs/static/media/poke-logo.907dcf3a592a0e37e0dd.png",
+    "static/media/spattack.png": "/pokedex-reactjs/static/media/spattack.69109bd567641376e421.png",
+    "static/media/attack.png": "/pokedex-reactjs/static/media/attack.bed6a36f946e1e1a9220.png",
     "index.html": "/pokedex-reactjs/index.html",
-    "main.2f26f9e6.js.map": "/pokedex-reactjs/static/js/main.2f26f9e6.js.map"
+    "main.cb462086.js.map": "/pokedex-reactjs/static/js/main.cb462086.js.map"
   },
   "entrypoints": [
-    "static/js/main.2f26f9e6.js"
+    "static/js/main.cb462086.js"
   ]
 }
