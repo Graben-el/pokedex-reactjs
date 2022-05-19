@@ -16,7 +16,7 @@ export const PokedexHeader = () => {
 const Container = styled.header`
     display: flex;
     width: 100%;
-    padding: 0 15px;
+    padding: 0 30px;
     justify-content: space-between;
     margin-bottom: 30px;
     background-color: transparent;

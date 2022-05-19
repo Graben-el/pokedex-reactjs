@@ -33,7 +33,7 @@ export const PokemonList = () => {
         <>
             {!isEmpty(pokemons) ?
                 <Container>
-                    <Input />
+                    {/* <Input /> */}
                     <List>
                         {
                             pokemons.map(({ name, sprites, types }, key) => {
@@ -88,7 +88,7 @@ const List = styled.ul`
 const PokemonCard = styled.li`
     text-transform: capitalize; 
     margin: 8px;
-    padding: 10px;
+    padding: 18px;
     border: 2px outset #cac9c925;
     transition: 0.2s ease-in-out;
     box-shadow: -3px 4px 5px #00000022;

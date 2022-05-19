@@ -83,8 +83,8 @@ export const PokemonDetails = (props) => {
                                     {
                                         pokemon.abilities.map((element, index) => {
                                             if(index <= 1){
-                                            return (
-                                                <p key={index}>{element.ability.name}</p>
+                                                return (
+                                                    <p key={index}>{element.ability.name}</p>
                                             )}
                                         })
                                     }
@@ -122,10 +122,6 @@ export const PokemonDetails = (props) => {
             }
         </>
     )
-}
-
-const bgColor = {
-    color: "#000"
 }
 
 const Container = styled.section`
@@ -217,8 +213,9 @@ const PokemonCard = styled.div`
 `
 
 const Image = styled.img`
-    width: 425px;
-    margin-top: -30px;
+    width: 450px;
+    /* margin-top: -30px; */
+    margin-bottom: -20px;
     filter: drop-shadow(-10px 10px 3px #00000076);
 `
 
@@ -249,7 +246,6 @@ const Type = styled.p`
 
         for (const [type, color] of Object.entries(types)) {
             if (type === props.typeName) {
-                console.log(color)
                 return props.typeName = color
             }
         }
@@ -275,7 +271,7 @@ const MovesContainer = styled.div`
     background-color: white;
     width: 90%;
     border-radius: 10px;
-    padding: 6px;
+    padding: 6px 6px 3px;
 `
 const Moves = styled.ul`
     display: grid;
@@ -292,7 +288,7 @@ const Move = styled.li`
 `
 
 const AbilitiesContainer = styled.div`
-    height: 35%;
+    height: 33%;
     width: 90%;
     box-shadow: -3px 4px 5px #0000007a;
     border: 2px outset #eeeeee7a;
@@ -312,7 +308,7 @@ const Abilities = styled.div`
 const Ability = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     padding: 20px;
     margin-top: -30px;
@@ -324,5 +320,8 @@ const Descriptions = styled.div`
     height: 95%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    p {
+        margin-top: -10px;
+    }
 `

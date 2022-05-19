@@ -26,16 +26,16 @@ Atualmente o projeto se encontra EM DESENVOLVIMENTO.
 ## Recursos já implementados
 
 <ul>
-    <li>Página inicial com card de pokémons com nome e tipo e botão "Show More" que adiciona mais pokémons à página</li>
-    <li>Página de detalhe individual para cada pokémon, relacionando seu nome, tipo, movimentos e habilidades</li>
+    <li>Página inicial com card de pokémons com nome e tipo e botão "Show More" que adiciona mais pokémons à página;</li>
+    <li>Página de detalhe individual para cada pokémon, relacionando seu nome, tipo, movimentos e habilidades;</li>
+    <li>Estilização da Página de Detalhes;</li>
+    <li>Estatisticas, movimentos e habilidades com descrição;</li>
     <li>Estilização do Layout externo e da página inicial</li>
 </ul>
 
 ## Recursos a serem implementados em breve
 <ul>
-    <li>Finalizar estilização das paginas de detalhes dos pokémons</li>
-    <li>Implementar cor de fundo adaptativa para página de detalhe do pokémon e para o container de tipos</li>
     <li>Implementar função de filtro e busca de pokemon via formulário</li>
-    <li>Renderização da descrição das habilidades de cada pokemon e outras informações interessantes</li>
     <li>Incluir fontes personalizadas</li>
+    <li>Alternador de Tema escuro/Tema Claro</li>
 </ul>
