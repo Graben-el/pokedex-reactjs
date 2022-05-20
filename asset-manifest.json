@@ -1,14 +1,20 @@
 {
   "files": {
-    "main.js": "/pokedex-reactjs/static/js/main.62975ca4.js",
+    "main.css": "/pokedex-reactjs/static/css/main.4f655b0b.css",
+    "main.js": "/pokedex-reactjs/static/js/main.1845f714.js",
+    "static/media/speed.png": "/pokedex-reactjs/static/media/speed.575654c96bfbf755f957.png",
     "static/media/hp.png": "/pokedex-reactjs/static/media/hp.317b89177a409a901aef.png",
+    "static/media/PokemonHollow.ttf": "/pokedex-reactjs/static/media/PokemonHollow.47f77ce9939c5330492b.ttf",
     "static/media/poke-logo.png": "/pokedex-reactjs/static/media/poke-logo.907dcf3a592a0e37e0dd.png",
+    "static/media/PokemonSolid.ttf": "/pokedex-reactjs/static/media/PokemonSolid.5d60be1f7ff5fcc21fc1.ttf",
     "static/media/spattack.png": "/pokedex-reactjs/static/media/spattack.69109bd567641376e421.png",
     "static/media/attack.png": "/pokedex-reactjs/static/media/attack.bed6a36f946e1e1a9220.png",
     "index.html": "/pokedex-reactjs/index.html",
-    "main.62975ca4.js.map": "/pokedex-reactjs/static/js/main.62975ca4.js.map"
+    "main.4f655b0b.css.map": "/pokedex-reactjs/static/css/main.4f655b0b.css.map",
+    "main.1845f714.js.map": "/pokedex-reactjs/static/js/main.1845f714.js.map"
   },
   "entrypoints": [
-    "static/js/main.62975ca4.js"
+    "static/css/main.4f655b0b.css",
+    "static/js/main.1845f714.js"
   ]
 }
