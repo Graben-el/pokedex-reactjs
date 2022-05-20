@@ -19,8 +19,9 @@ Este projeto deve ser desenvolvido utilizando React JS para criação da Single 
 
 Atualmente o projeto se encontra EM DESENVOLVIMENTO.
 
-<div style='display: flex; justfy-content: center; align-items: center; margin: 20px 0;'>
-    <img src="./src/assets/gifs/pokedex1.gif">
+<div style='display: flex; justfy-content: center; align-items: center; flex-direction: column; margin: 20px 0;'>
+    <img src="./src/assets/gifs/pokedex2.gif" style='margin: 30px 0;'>
+    <img src="./src/assets/gifs/loading.gif">
 </div>
 
 ## Recursos já implementados
@@ -28,6 +29,7 @@ Atualmente o projeto se encontra EM DESENVOLVIMENTO.
 <ul>
     <li>Página inicial com card de pokémons com nome e tipo e botão "Show More" que adiciona mais pokémons à página;</li>
     <li>Página de detalhe individual para cada pokémon, relacionando seu nome, tipo, movimentos e habilidades;</li>
+    <li>Tela de 'Loading' ao aguardar respostas da API;</li>
     <li>Estilização da Página de Detalhes;</li>
     <li>Estatisticas, movimentos e habilidades com descrição;</li>
     <li>Estilização do Layout externo e da página inicial</li>
@@ -35,7 +37,6 @@ Atualmente o projeto se encontra EM DESENVOLVIMENTO.
 
 ## Recursos a serem implementados em breve
 <ul>
-    <li>Implementar função de filtro e busca de pokemon via formulário</li>
-    <li>Incluir fontes personalizadas</li>
     <li>Alternador de Tema escuro/Tema Claro</li>
+    <li>Layout Responsivo</li>
 </ul>

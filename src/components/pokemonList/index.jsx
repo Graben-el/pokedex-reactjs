@@ -97,7 +97,7 @@ const PokemonCard = styled.li`
         font-family: 'Pokemon', Arial, Serif;
         font-weight: 300;
         color: gold;
-        text-shadow: 2px 0 3px blue, -2px 0 3px blue, 0 2px 3px blue, 0 -2px  3px  blue, 1px 1px 3px blue, -1px -1px  3px  blue, 1px -1px  3px  blue, -1px 1px  3px  blue;
+        text-shadow: 2px 0 1px blue, -2px 0 1px blue, 0 2px 1px blue, 0 -2px  1px  blue, 1px 1px 1px blue, -1px -1px  1px  blue, 1px -1px  1px  blue, -1px 1px  1px  blue;
     }
 
     img {
