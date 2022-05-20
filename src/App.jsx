@@ -7,6 +7,7 @@ import { Controls } from "./components/layout/gameBoy";
 import { Pad } from "./components/layout/gameBoy/pad";
 import { Display } from "./components/layout/gameBoy/display";
 import { Buttons } from "./components/layout/gameBoy/buttons";
+import './App.css'
 
 function App() {
   return (

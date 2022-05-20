@@ -15,6 +15,7 @@ const Button = styled.button`
     border-radius: 10px;
     font-weight: bolder;
     transition: 0.2s ease-in-out;
+    margin-bottom: 15px;
 
     &:hover{
         transform: scale(1.05);

@@ -12,3 +12,7 @@ export async function getPokemon(pokemon) {
     const data = await response.json()
     return data
 }
+
+export function isEmpty(obj) {
+    return Object.keys(obj).length === 0;
+}

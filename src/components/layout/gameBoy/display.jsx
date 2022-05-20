@@ -22,6 +22,10 @@ const Container = styled.div`
 `
 
 const Screen = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border: 10px outset rgba(212, 212, 212, 0.726);
     border-radius: 10px;
     width: 100%;

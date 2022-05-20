@@ -7,17 +7,15 @@ import attack from "../../assets/icons/attack.png"
 import def from "../../assets/icons/def.png"
 import spa from "../../assets/icons/spattack.png"
 import spd from "../../assets/icons/spdef.png"
-import { type } from "@testing-library/user-event/dist/type";
+import speed from "../../assets/icons/speed.png"
+import { isEmpty } from "../../services/getPokemon";
+import Loading from "../loading/loading";
 
 export const PokemonDetails = (props) => {
     const [pokemon, setPokemon] = useState({})
     const [description, setDescription] = useState([])
 
     const { name } = useParams()
-
-    function isEmpty(obj) {
-        return Object.keys(obj).length === 0;
-    }
 
     useEffect(() => {
         const fetchData = async () => {
@@ -98,19 +96,6 @@ export const PokemonDetails = (props) => {
                                                 return <p key={index}>{element.effect_entries[index + 1].short_effect}</p>
                                             }}
                                         })
-
-                                        // description?.map((element) => {
-
-                                        //     console.log(element)
-                                        //     element.effect_entries.map((effect, index) => {
-                                        //         console.log(effect)
-                                        //         if (effect.language.name === 'en') {
-                                        //             return <p key={index}>{effect.short_effect}</p>
-                                        //         } else {
-                                        //             return <p key={index}>{effect.short_effect}</p>
-                                        //         }
-                                        //     })
-                                        // })
                                     }
                                 </Descriptions>
                             </Abilities>
@@ -118,7 +103,7 @@ export const PokemonDetails = (props) => {
 
                     </Details>
                 </Container>
-                : 'Carregando'
+                : <Loading />
             }
         </>
     )
@@ -201,6 +186,15 @@ const Stats = styled.div`
         display: inline-block;
         margin-right: 4px;
     }
+    .speed::before{
+        content: "";
+        background: url(${speed}) center center no-repeat;
+        background-size: contain;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        margin-right: 4px;
+    }
 `
 
 const PokemonCard = styled.div`
@@ -208,7 +202,11 @@ const PokemonCard = styled.div`
 
     h1 {
         font-size: 2rem;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+        font-family: 'Pokemon', Arial, Serif;
+        font-weight: 300;
+        color: #ffc400;
+        text-shadow: 2px 0 3px blue, -2px 0 3px blue, 0 2px 3px blue, 0 -2px  3px  blue, 1px 1px 3px blue, -1px -1px  3px  blue, 1px -1px  3px  blue, -1px 1px  3px  blue;
     }
 `
 
@@ -225,6 +223,7 @@ const TypeContainer = styled.div`
 `
 
 const Type = styled.p`
+
     margin: 0 6px;
     width: 20%;
     border: 1px solid #0000001f;
@@ -259,10 +258,17 @@ const Details = styled.div`
     border: 1px solid;
     width: 45%;
     height: 95%;
-    border: 10px double gold;
+    border: 10px double #ffc400;
     background-color: #003ad8;
     border-radius: 10px;
     box-shadow: -5px 5px 5px #0000007a;
+
+    h2 {
+        font-family: 'Pokemon Hollow', Arial, Serif;
+        color: #ffc400;
+        font-size: 1.2em;
+        margin-top: -18px;
+    }
 `
 
 const MovesContainer = styled.div`
@@ -270,6 +276,7 @@ const MovesContainer = styled.div`
     border: 2px outset #eeeeee7a;
     background-color: white;
     width: 90%;
+    height: 35%;
     border-radius: 10px;
     padding: 6px 6px 3px;
 `
@@ -278,8 +285,6 @@ const Moves = styled.ul`
     grid-template-columns: repeat(3, 1fr);
     gap: 0 20px;
     text-transform: capitalize;
-    padding: 10px;
-    margin: 10px;
     /* border: 1px solid; */
 `
 

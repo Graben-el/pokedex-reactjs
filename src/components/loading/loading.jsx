@@ -1,17 +1,21 @@
-import styled from "styled-components"
+import React from 'react';
+import styled from "styled-components";
 
-export const Pokeball = () => {
-    return(
-        <Container>
-            <UpperPart />
-            <MiddlePart>
-                <Circle />   
-            </MiddlePart>       
-        </Container>
-    )
+export const Loading = (props) => {
+    return (
+        <>
+            <LoadingPokeball>
+                <UpperPart />
+                <MiddlePart>
+                    <Circle />
+                </MiddlePart>
+            </LoadingPokeball>
+            <h1>Carregando...</h1>
+        </>
+    );
 }
 
-const Container = styled.div`
+const LoadingPokeball = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -20,9 +24,18 @@ const Container = styled.div`
     height: 100px;
     border-radius: 50px;
     border: 4px solid rgb(0, 0, 0);
-    box-shadow: -2px 3px 6px 4px rgb(0 0 0 / 55%);
-`
+    margin-bottom: 15px;
+    animation: Pokeball-Spin infinite 2s linear;
 
+    @keyframes Pokeball-Spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+`
 const UpperPart = styled.div`
     align-self: flex-start;
     height: 50%;
@@ -34,7 +47,7 @@ const UpperPart = styled.div`
 `
 
 const MiddlePart = styled.div`
-     display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     align-self: center;
@@ -54,3 +67,5 @@ const Circle = styled.div`
     border-radius: 50px;
     border: 4px solid black;
 `
+
+export default Loading;

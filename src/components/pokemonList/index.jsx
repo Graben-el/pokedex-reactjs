@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { getPokemon, getPokemonList } from "../../services/getPokemon";
 import { ButtonShowMore } from "./buttonShowMore";
-import { Input } from "./form";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Loading from "../loading/loading";
+import { isEmpty } from "../../services/getPokemon";
 
 export const PokemonList = () => {
     const requests = 10
@@ -12,10 +13,6 @@ export const PokemonList = () => {
 
     const handleOffset = async () => {
         setOffset(offset + requests)
-    }
-
-    function isEmpty(obj) {
-        return Object.keys(obj).length === 0;
     }
 
     useEffect(() => {
@@ -30,10 +27,9 @@ export const PokemonList = () => {
     }, [offset])
 
     return (
-        <>
+        <> 
             {!isEmpty(pokemons) ?
                 <Container>
-                    {/* <Input /> */}
                     <List>
                         {
                             pokemons.map(({ name, sprites, types }, key) => {
@@ -57,14 +53,14 @@ export const PokemonList = () => {
                     </List>
                     <ButtonShowMore handleOffset={handleOffset} />
                 </Container>
-                : 'Carregando'
-            }
+                : <Loading />}
         </>
     )
 }
 
 const Container = styled.div`
     width: 100%;
+    max-height: 100%;
     padding: 30px 0;
     a {
         text-decoration: none;
@@ -95,6 +91,13 @@ const PokemonCard = styled.li`
 
     &:hover {
         transform: scale(1.02);
+    }
+
+    h1 {
+        font-family: 'Pokemon', Arial, Serif;
+        font-weight: 300;
+        color: gold;
+        text-shadow: 2px 0 3px blue, -2px 0 3px blue, 0 2px 3px blue, 0 -2px  3px  blue, 1px 1px 3px blue, -1px -1px  3px  blue, 1px -1px  3px  blue, -1px 1px  3px  blue;
     }
 
     img {
@@ -131,7 +134,6 @@ const Type = styled.p`
 
         for (const [type, color] of Object.entries(types)) {
             if (type === props.typeName) {
-                console.log(color)
                 return props.typeName = color
             }
         }
