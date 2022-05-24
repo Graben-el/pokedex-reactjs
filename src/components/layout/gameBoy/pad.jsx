@@ -14,4 +14,8 @@ const ScrollPad = styled.div`
     border: 5px outset rgb(85, 85, 85);
     box-shadow: -2px 3px 7px 2px;
     margin: 10px;
+
+    @media (max-width: 1665px) {
+        display: none;
+    }
 `

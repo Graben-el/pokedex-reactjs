@@ -19,6 +19,14 @@ const Container = styled.div`
     border-radius: 10px;
     border: 3px solid black;
     box-shadow: -2px 3px 6px 4px rgb(0 0 0 / 55%);
+    
+    @media (max-width: 888px) {
+        max-height: 100%;
+    }
+
+    @media (max-width: 664px) {
+        height: 95%;
+    }
 `
 
 const Screen = styled.div`
@@ -30,6 +38,5 @@ const Screen = styled.div`
     border-radius: 10px;
     width: 100%;
     height: 100%;
-    
     overflow-y: scroll;
 `

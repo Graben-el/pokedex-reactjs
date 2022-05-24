@@ -17,12 +17,19 @@ Este projeto deve ser desenvolvido utilizando React JS para criação da Single 
 
 ## Estágio atual do projeto
 
-Atualmente o projeto se encontra EM DESENVOLVIMENTO.
+<p>Atualmente o projeto se encontra EM DESENVOLVIMENTO.</p>
 
 <div style='display: flex; justfy-content: center; align-items: center; flex-direction: column; margin: 20px 0;'>
-    <img src="./src/assets/gifs/pokedex2.gif" style='margin: 30px 0;'>
+    <img src="./src/assets/gifs/pokedex2.gif" style='margin: 10px 0 30px 0;'>
     <img src="./src/assets/gifs/loading.gif">
 </div>
+
+<div style='margin: 40px 0;'>
+    <h2 style='text-align: left;'>Layout Responsivo:</h2>
+    <img src="./src/assets/gifs/responsivo.gif" style='margin: 10px 0 30px 0;' />
+</div>
+
+
 
 ## Recursos já implementados
 
@@ -33,10 +40,10 @@ Atualmente o projeto se encontra EM DESENVOLVIMENTO.
     <li>Estilização da Página de Detalhes;</li>
     <li>Estatisticas, movimentos e habilidades com descrição;</li>
     <li>Estilização do Layout externo e da página inicial</li>
+    <li>Layout Responsivo</li>
 </ul>
 
 ## Recursos a serem implementados em breve
 <ul>
     <li>Alternador de Tema escuro/Tema Claro</li>
-    <li>Layout Responsivo</li>
 </ul>

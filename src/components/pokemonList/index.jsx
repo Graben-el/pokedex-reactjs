@@ -61,7 +61,7 @@ export const PokemonList = () => {
 const Container = styled.div`
     width: 100%;
     max-height: 100%;
-    padding: 30px 0;
+    padding: 10px 0;
     a {
         text-decoration: none;
         color: black;
@@ -79,6 +79,14 @@ const List = styled.ul`
     list-style: none;
     padding: 0;
     margin-bottom: 20px;
+
+    @media (max-width: 664px) {
+       justify-content: center;
+    }
+
+    @media (max-width: 400px) {
+      justify-content: center;
+    }
 `
 
 const PokemonCard = styled.li`
@@ -98,6 +106,7 @@ const PokemonCard = styled.li`
         font-weight: 300;
         color: gold;
         text-shadow: 2px 0 1px blue, -2px 0 1px blue, 0 2px 1px blue, 0 -2px  1px  blue, 1px 1px 1px blue, -1px -1px  1px  blue, 1px -1px  1px  blue, -1px 1px  1px  blue;
+        margin-top: -20px;
     }
 
     img {
@@ -105,6 +114,26 @@ const PokemonCard = styled.li`
         filter: drop-shadow(-8px 6px 3px #00000076);
     }
     
+    @media (max-width: 664px) {
+        margin: 0;
+        padding: 10px;
+
+       img {
+           width: 85px;
+       }
+
+       h1 {
+           font-size: 12px;
+       }
+    }
+
+    @media (max-width: 400px) {
+        margin: 2px;
+
+        img {
+          width: 100px;
+        }
+    }
 `
 
 const TypeContainer = styled.div`
@@ -138,4 +167,9 @@ const Type = styled.p`
             }
         }
     }};
+
+    @media (max-width: 664px) {
+       width: 70%;
+       font-size: 10px;
+    }
 `

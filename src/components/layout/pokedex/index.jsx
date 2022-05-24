@@ -15,6 +15,11 @@ const SectionContainer = styled.section`
     width: 95%;
     height: 95%;
     box-shadow: rgb(0 0 0 / 42%) -6px 6px 6px 3px;
+
+    @media (max-width: 664px) {
+        width: 100%;
+        height: 100%;
+    }
 `
 
 const Container = styled.div`
@@ -29,4 +34,8 @@ const Container = styled.div`
     border-radius: 50px;
     border: 5px solid black;
     box-shadow: inset rgb(0 0 0 / 42%) 6px -5px 6px 3px;
+    
+    @media (max-width: 664px) {
+        border-radius: 0;
+    }
 `

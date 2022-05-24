@@ -21,6 +21,13 @@ const Container = styled.div`
     border-radius: 50px;
     border: 4px solid rgb(0, 0, 0);
     box-shadow: -2px 3px 6px 4px rgb(0 0 0 / 55%);
+    align-self: center;
+
+    @media (max-width: 664px) {
+        height: 50px;
+        width: 50px;
+        margin-top: 10px;
+    }
 `
 
 const UpperPart = styled.div`
@@ -53,4 +60,9 @@ const Circle = styled.div`
     background-color: white;
     border-radius: 50px;
     border: 4px solid black;
+
+    @media (max-width: 664px) {
+        height: 18px;
+        width: 18px;
+    }
 `

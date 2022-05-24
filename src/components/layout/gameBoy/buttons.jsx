@@ -24,6 +24,18 @@ const Container = styled.div`
     flex-direction: column;
     /* background-color: grey; */
     border-radius: 30px;
+
+    @media (max-width: 1124px) {
+        display: none;
+    }
+`
+
+const MiddleContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    width: 100%;
+    margin: -5px auto
 `
 
 const Home = styled.div`
@@ -38,14 +50,16 @@ const Home = styled.div`
     color: rgb(255, 134, 134);
     border: 6px outset black;
     box-shadow: -2px 3px 6px 3px rgba(0, 0, 0, 0.55);
-`
 
-const MiddleContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-self: center;
-    width: 100%;
-    margin: -5px auto
+    @media (max-width: 1500px) {
+        width: 80px;
+        height: 80px;
+    }
+
+    @media (max-width: 1300px) {
+        width: 70px;
+        height: 70px;
+    }
 `
 
 const ShowMore = styled.div`
@@ -60,6 +74,16 @@ const ShowMore = styled.div`
     color: rgb(255, 134, 134);
     border: 6px outset black;
     box-shadow: -2px 3px 6px 3px rgba(0, 0, 0, 0.55);
+
+    @media (max-width: 1500px) {
+        width: 80px;
+        height: 80px;
+    }
+
+    @media (max-width: 1300px) {
+        width: 70px;
+        height: 70px;
+    }
 `
 
 const ThemeThoggler = styled.div`
@@ -73,6 +97,16 @@ const ThemeThoggler = styled.div`
     color: rgb(255, 134, 134);
     border: 6px outset black;
     box-shadow: -2px 3px 6px 3px rgba(0, 0, 0, 0.55);
+
+    @media (max-width: 1500px) {
+        width: 80px;
+        height: 80px;
+    }
+
+    @media (max-width: 1300px) {
+        width: 70px;
+        height: 70px;
+    }
 `
 
 const Search = styled.div`
@@ -87,4 +121,14 @@ const Search = styled.div`
     color: rgb(255, 134, 134);
     border: 6px outset black;
     box-shadow: -2px 3px 6px 3px rgba(0, 0, 0, 0.55);
+
+    @media (max-width: 1500px) {
+        width: 80px;
+        height: 80px;
+    }
+
+    @media (max-width: 1300px) {
+        width: 70px;
+        height: 70px;
+    }
 `

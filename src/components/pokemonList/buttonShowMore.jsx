@@ -21,4 +21,9 @@ const Button = styled.button`
         transform: scale(1.05);
     }
     
+    @media (max-width: 664px) {
+        padding: 5px;
+        margin-bottom: 0;
+        font-size: 11px;
+    }
 `
