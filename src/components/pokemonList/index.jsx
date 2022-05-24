@@ -1,9 +1,6 @@
-import { useEffect, useState } from "react";
-import { getPokemon, getPokemonList } from "../../services/getPokemon";
-import { ButtonShowMore } from "./buttonShowMore";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import Loading from "../loading/loading";
+import { useEffect, useState } from "react"; import { getPokemon, getPokemonList } from "../../services/getPokemon";
+import { ButtonShowMore } from "./buttonShowMore"; import { Link } from "react-router-dom";
+import styled from "styled-components"; import Loading from "../loading/loading";
 import { isEmpty } from "../../services/getPokemon";
 
 export const PokemonList = () => {
@@ -31,19 +28,14 @@ export const PokemonList = () => {
             {!isEmpty(pokemons) ?
                 <Container>
                     <List>
-                        {
-                            pokemons.map(({ name, sprites, types }, key) => {
+                        { pokemons.map(({ name, sprites, types }, key) => {
                                 return (
                                     <Link to={`/pokemon/${name}`} key={key}>
                                         <PokemonCard key={key}>
                                             <img src={sprites?.other['official-artwork'].front_default} alt={name} title={name} />
                                             <h1>{name}</h1>
                                             <TypeContainer>
-                                                {types?.map((element, index) => {
-                                                    return (
-                                                        <Type key={index} typeName={element.type.name}>{element.type.name}</Type>
-                                                    )
-                                                })}
+                                                {types?.map( (element, index) => <Type key={index} typeName={element.type.name}>{element.type.name}</Type> )}
                                             </TypeContainer>
                                         </PokemonCard>
                                     </Link>
@@ -53,7 +45,9 @@ export const PokemonList = () => {
                     </List>
                     <ButtonShowMore handleOffset={handleOffset} />
                 </Container>
-                : <Loading />}
+                : 
+                <Loading />
+            }
         </>
     )
 }
@@ -64,11 +58,6 @@ const Container = styled.div`
     padding: 10px 0;
     a {
         text-decoration: none;
-        color: black;
-
-        &:visited {
-            color: black;
-        }
     }
 `
 
@@ -79,14 +68,6 @@ const List = styled.ul`
     list-style: none;
     padding: 0;
     margin-bottom: 20px;
-
-    @media (max-width: 664px) {
-       justify-content: center;
-    }
-
-    @media (max-width: 400px) {
-      justify-content: center;
-    }
 `
 
 const PokemonCard = styled.li`
@@ -96,40 +77,33 @@ const PokemonCard = styled.li`
     border: 2px outset #cac9c925;
     transition: 0.2s ease-in-out;
     box-shadow: -3px 4px 5px #00000022;
-
     &:hover {
         transform: scale(1.02);
     }
-
     h1 {
         font-family: 'Pokemon', Arial, Serif;
         font-weight: 300;
-        color: gold;
+        color: #ffc400;
         text-shadow: 2px 0 1px blue, -2px 0 1px blue, 0 2px 1px blue, 0 -2px  1px  blue, 1px 1px 1px blue, -1px -1px  1px  blue, 1px -1px  1px  blue, -1px 1px  1px  blue;
-        margin-top: -20px;
     }
-
     img {
         width: 200px;
         filter: drop-shadow(-8px 6px 3px #00000076);
     }
     
     @media (max-width: 664px) {
-        margin: 0;
-        padding: 10px;
-
+        margin: 2px;
+        padding: 20px;
        img {
-           width: 85px;
+           width: 115px;
        }
-
        h1 {
            font-size: 12px;
        }
     }
 
     @media (max-width: 400px) {
-        margin: 2px;
-
+        margin: 0px;
         img {
           width: 100px;
         }
@@ -150,14 +124,10 @@ const Type = styled.p`
     color: white;
     background-color: ${props => {
         const types = {
-            normal: "#A8A878", fire: "#F08030",
-            water: "#6890F0", grass: "#78C850",
-            electric: "#F8D030", ice: "#98D8D8",
-            fighting: "#C03028", poison: "#A040A0",
-            ground: "#E0C068", flying: "#A890F0",
-            psychic: "#F85888", bug: "#A8B820",
-            rock: "#B8A038", ghost: "#705898",
-            dark: "#705848", dragon: "#7038F8",
+            normal: "#A8A878", fire: "#F08030", water: "#6890F0", grass: "#78C850",
+            electric: "#F8D030", ice: "#98D8D8", fighting: "#C03028", poison: "#A040A0",
+            ground: "#E0C068", flying: "#A890F0", psychic: "#F85888", bug: "#A8B820",
+            rock: "#B8A038", ghost: "#705898", dark: "#705848", dragon: "#7038F8",
             steel: "#B8B8D0", fairy: "#F0B6BC"
         }
 
