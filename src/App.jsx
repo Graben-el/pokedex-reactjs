@@ -1,27 +1,30 @@
-import { AppRoutes } from "./pages/routes"
-import styled from "styled-components";
+import './App.css'
 import { createGlobalStyle } from "styled-components";
 import { Pokedex } from "./components/layout/pokedex";
 import { PokedexHeader } from "./components/layout/header";
-import { Controls } from "./components/layout/gameBoy";
-import { Pad } from "./components/layout/gameBoy/pad";
-import { Display } from "./components/layout/gameBoy/display";
-import { Buttons } from "./components/layout/gameBoy/buttons";
-import './App.css'
+import { Body } from "./components/layout/body/body";
+import { Controls } from "./components/layout/controls";
+import { Pad } from "./components/layout/controls/pad";
+import { Buttons } from "./components/layout/controls/buttons";
+import { Display } from "./components/layout/controls/display"
+import { ThemeProvider } from "./components/contexts/theme-context";
+
 
 function App() {
   return (
-    <Body>
-      <GlobalStyle />
-      <Pokedex>
-        <PokedexHeader />
-        <Controls>
-          <Pad />
-          <Display />
-          <Buttons />
-        </Controls>
-      </Pokedex>
-    </Body>
+    <ThemeProvider>
+      <Body>
+        <GlobalStyle />
+        <Pokedex>
+          <PokedexHeader />
+          <Controls>
+            <Pad />
+            <Display />
+            <Buttons />
+          </Controls>
+        </Pokedex>
+      </Body>
+    </ThemeProvider>
   );
 }
 
@@ -31,17 +34,9 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    transition: 0.2s ease-in-out
   }
 `
-const Body = styled.main`
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    margin: 0 auto;
-    height: 99vh;
-    max-width: 1920px;
-    background-color: rgb(0, 179, 255);
-`
+
 
 export default App;

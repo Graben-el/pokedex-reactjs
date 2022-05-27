@@ -1,16 +1,6 @@
-import styled from "styled-components";
-import { Buttons } from "./buttons";
-import { Display } from "./display";
-import { Pad } from "./pad";
+import styled from 'styled-components'
 
-export const Controls = ({ children }) => {
-    return (
-    <Container>
-        {children}
-    </Container>)
-}
-
-const Container = styled.section`
+export const ControlsContainer = styled.section`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
