@@ -1,4 +1,4 @@
-# Pokédex (em desenvolvimento)
+# Pokédex 
 
 ## Descrição do projeto
 
