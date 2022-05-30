@@ -35,6 +35,12 @@ export const Inside = styled.div`
 
         @media (max-width: 1124px) {
             display: block;
+            font-size: 120%;
+            color: #007e7eb7;
+
+            &:active {
+                transform: scale(0.9);
+            }
         }
     }
 `

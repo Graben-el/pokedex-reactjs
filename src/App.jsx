@@ -8,23 +8,26 @@ import { Pad } from "./components/layout/controls/pad";
 import { Buttons } from "./components/layout/controls/buttons";
 import { Display } from "./components/layout/controls/display"
 import { ThemeProvider } from "./components/contexts/theme-context";
+import { BrowserRouter } from 'react-router-dom';
 
 
 function App() {
   return (
-    <ThemeProvider>
-      <Body>
-        <GlobalStyle />
-        <Pokedex>
-          <PokedexHeader />
-          <Controls>
-            <Pad />
-            <Display />
-            <Buttons />
-          </Controls>
-        </Pokedex>
-      </Body>
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider>
+        <Body>
+          <GlobalStyle />
+          <Pokedex>
+            <PokedexHeader />
+            <Controls>
+              <Pad />
+              <Display />
+              <Buttons />
+            </Controls>
+          </Pokedex>
+        </Body>
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 

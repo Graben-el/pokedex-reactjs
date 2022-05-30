@@ -5,6 +5,8 @@ export const ButtonsContainer = styled.div`
     display: flex;
     flex-direction: column;
     border-radius: 30px;
+    justify-content: center;
+    align-items: center;
 
     @media (max-width: 1124px) {
         display: none;
@@ -25,6 +27,7 @@ export const ButtonsContainer = styled.div`
         overflow: hidden;
         cursor: pointer;
         transition: 0.1s ease-in-out;
+        font-size: 38px;
 
         &:active{
             transform: scale(0.8);
